@@ -1,0 +1,25 @@
+﻿I. SELECT id FROM Products WHERE Brand = "Adidas"
+
+
+II. SELECT Shop.ProductId FROM Shop WHERE Price > 500
+
+
+III. SELECT DISTINCT Suppliers.id, Suppliers.name FROM Suppliers, Products, Shop WHERE Shop.ProductId = Products.Id AND Shop.SupplierId = Suppliers.id AND Products.Name = "Μπουφάν"
+
+
+IV. SELECT DISTINCT SupplierId FROM Shop, Products WHERE Products.Id = Shop.ProductId AND ( Products.Brand = "Adidas" OR Products.Brand = "Nike")
+
+
+
+
+IV)SELECT DISTINCT Suppliers.id FROM Products,Shop,Suppliers
+where shop.SupplierId = Suppliers.id 
+and Shop.ProductId = Products.Id 
+and Products.Brand = "Adidas" 
+or Products.Brand = "Nike" 
+
+SELECT DISTINCT SupplierId FROM Products,Shop,Suppliers
+where shop.SupplierId = Suppliers.id 
+and Shop.ProductId = Products.Id 
+and Products.Brand = "Adidas" 
+or Products.Brand = "Nike" 
